@@ -9,13 +9,17 @@
   <remote name="polly" fetch="https://github.com/ruslo"/>
   <remote name="seL4" fetch="../seL4"/>
   <remote name="zeromq" fetch="https://github.com/zeromq"/>
+  <remote name="capsule" fetch="https://github.com/CAPSULENOS"/>
   
   <default remote="seL4" revision="master"/>
   
   <project name="camkes-tool.git" path="projects/camkes-tool" revision="f0fb22be4eabf6501bc2730eacc367ad12146ac1" upstream="master" dest-branch="master">
     <linkfile src="docs/index.md" dest="camkes_README.md"/>
   </project>
-  <project name="camkes-vm-examples.git" path="projects/vm-examples" revision="977022b13b93c1eb36f399db63abbe6e0157e7f9" upstream="master" dest-branch="master">
+  <!--project name="camkes-vm-examples.git" path="projects/vm-examples" revision="977022b13b93c1eb36f399db63abbe6e0157e7f9" upstream="master" dest-branch="master">
+    <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
+  </project-->
+  <project name="camkes-vm-examples.git" path="projects/vm-examples" remote="capsule" dest-branch="master">
     <linkfile src="easy-settings.cmake" dest="easy-settings.cmake"/>
   </project>
   <project name="camkes-vm-images.git" path="projects/camkes-vm-images" revision="38cc97b913d11a35dd95f4fec47c742a0c84f94a" upstream="master" dest-branch="master"/>
